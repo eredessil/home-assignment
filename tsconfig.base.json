@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@shared-stores": ["apps/shared-stores/src/index.ts"],
+      "@shared-types": ["apps/shared-types/src/index.ts"],
+      "@sprintform-ui/web": ["apps/ui/web/src/index.ts"],
+      "@sprintform/types": ["types/src/index.ts"],
+      "@sprintform/utils": ["apps/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

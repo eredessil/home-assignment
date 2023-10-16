@@ -1,0 +1,29 @@
+{
+  "name": "shared-stores",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/shared-stores/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/shared-stores",
+        "main": "apps/shared-stores/src/index.ts",
+        "tsConfig": "apps/shared-stores/tsconfig.lib.json",
+        "assets": ["apps/shared-stores/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/shared-stores/**/*.ts",
+          "apps/shared-stores/package.json"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
